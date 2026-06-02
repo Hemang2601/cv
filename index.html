@@ -98,31 +98,34 @@
 <body class="bg-[#070b13] text-slate-300 font-sans overflow-x-hidden selection:bg-cyan-400 selection:text-black">
 
   <nav class="fixed top-0 w-full z-50 bg-[#070b13]/80 backdrop-blur-md border-b border-white/5">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="#" class="text-2xl font-bold text-white tracking-wide hover:text-cyan-400 transition">
-        Hemang<span class="text-cyan-400">.dev</span>
-      </a>
-      
-      <div class="hidden md:flex gap-8 text-sm font-semibold text-slate-400">
-        <a href="#home" class="hover:text-cyan-400 hover:scale-105 transition">Home</a>
-        <a href="#skills" class="hover:text-cyan-400 hover:scale-105 transition">Skills</a>
-        <a href="#education" class="hover:text-cyan-400 hover:scale-105 transition">Education</a>
-        <a href="#projects" class="hover:text-cyan-400 hover:scale-105 transition">Projects</a>
-        <a href="#hackathons" class="hover:text-cyan-400 hover:scale-105 transition">Hackathons</a>
-      </div>
-
-      <button id="menu-btn" class="md:hidden text-2xl text-white focus:outline-none">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="#" class="text-2xl font-bold text-white tracking-wide hover:text-cyan-400 transition">
+      Hemang<span class="text-cyan-400">.dev</span>
+    </a>
     
-    <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-[#0f172a] border-b border-white/10 p-6 flex-col gap-6 text-center shadow-2xl">
-        <a href="#home" class="block text-lg hover:text-cyan-400 mobile-link">Home</a>
-        <a href="#skills" class="block text-lg hover:text-cyan-400 mobile-link">Skills</a>
-        <a href="#projects" class="block text-lg hover:text-cyan-400 mobile-link">Projects</a>
-        <a href="#education" class="block text-lg hover:text-cyan-400 mobile-link">Education</a>
+    <div class="hidden md:flex gap-8 text-sm font-semibold text-slate-400">
+      <a href="#home" class="hover:text-cyan-400 hover:scale-105 transition">Home</a>
+      <a href="#skills" class="hover:text-cyan-400 hover:scale-105 transition">Skills</a>
+      <a href="#education" class="hover:text-cyan-400 hover:scale-105 transition">Education</a>
+      <a href="#projects" class="hover:text-cyan-400 hover:scale-105 transition">Projects</a>
+      <a href="#hackathons" class="hover:text-cyan-400 hover:scale-105 transition">Hackathons</a>
+      <a href="#certificates" class="hover:text-cyan-400 hover:scale-105 transition">Certificates</a>
     </div>
-  </nav>
+
+    <button id="menu-btn" class="md:hidden text-2xl text-white focus:outline-none">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+  
+  <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-[#0f172a] border-b border-white/10 p-6 flex-col gap-6 text-center shadow-2xl">
+      <a href="#home" class="block text-lg hover:text-cyan-400 mobile-link">Home</a>
+      <a href="#skills" class="block text-lg hover:text-cyan-400 mobile-link">Skills</a>
+      <a href="#projects" class="block text-lg hover:text-cyan-400 mobile-link">Projects</a>
+      <a href="#education" class="block text-lg hover:text-cyan-400 mobile-link">Education</a>
+      <a href="#hackathons" class="block text-lg hover:text-cyan-400 mobile-link">Hackathons</a>
+      <a href="#certificates" class="block text-lg hover:text-cyan-400 mobile-link">Certificates</a>
+  </div>
+</nav>
 
   <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-24 pb-12 relative overflow-hidden bg-[#070b13] scroll-mt-24">
     <div class="absolute top-[-10%] left-[-10%] w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-purple-600/15 rounded-full blur-[100px] md:blur-[140px] -z-10 animate-pulse"></div>
@@ -591,6 +594,596 @@
   </div>
 </section>
 
+<!-- ================= CERTIFICATIONS SECTION ================= -->
+<section id="certificates" class="py-24 px-6 relative bg-slate-950">
+  <div class="max-w-7xl mx-auto">
+
+    
+
+
+    <!-- ================= CATEGORY 1: FULL-STACK, WEB & MOBILE ================= -->
+    <div class="flex items-center gap-4 mb-12" data-aos="fade-up">
+      <div class="h-px bg-gradient-to-r from-transparent to-slate-700 flex-1"></div>
+      <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+        <i class="fas fa-code text-purple-400"></i> Full-Stack, Web & Mobile Engineering
+      </h2>
+      <div class="h-px bg-gradient-to-l from-transparent to-slate-700 flex-1"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+      <!-- Cert 17 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-red-500/10 rounded-full blur-2xl group-hover:bg-red-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-red-500/10 flex items-center justify-center border border-red-500/20">
+            <i class="fab fa-laravel text-xl text-red-400"></i>
+          </div>
+          <button onclick="openCertModal('https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~LY8QV43CDWEY/CERTIFICATE_LANDING_PAGE~LY8QV43CDWEY.jpeg', 'Mastering Laravel Framework and PHP')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-red-400 transition-colors">Mastering Laravel Framework & PHP</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Coursera specialized program addressing advanced MVC design patterns, middleware logic, secure routing setups, and custom Eloquent ORM system designs.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fab fa-laravel text-red-500 icon-tooltip" data-title="Laravel"></i>
+          <i class="fab fa-php text-indigo-400 icon-tooltip" data-title="PHP Architecture"></i>
+        </div>
+      </div>
+
+      <!-- Cert 30 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-green-500/10 rounded-full blur-2xl group-hover:bg-green-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center border border-green-500/20">
+            <i class="fab fa-node-js text-xl text-green-400"></i>
+          </div>
+          <button onclick="openCertModal('https://media.licdn.com/dms/image/v2/D4D2DAQEYJFUV-jGUjw/profile-treasury-document-cover-images_1280/B4DZ5u88JcJYBA-/0/1779977931086?e=1781020800&v=beta&t=i2wWVvj1itqMlFd7j5RtEks-XXqqRaEOrgDiOBIkj8Y', 'Web Development with Node.js, MongoDB and Express')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">Web Dev: Node, Express & MongoDB</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Infosys certification evaluating capability to structure stable REST APIs, manage backend router arrays, and construct NoSQL data linkages.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fab fa-node-js text-green-400 icon-tooltip" data-title="Node.js"></i>
+          <i class="fas fa-leaf text-emerald-500 icon-tooltip" data-title="MongoDB"></i>
+        </div>
+      </div>
+
+      <!-- Cert 28 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-green-500/10 rounded-full blur-2xl group-hover:bg-green-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center border border-green-500/20">
+            <i class="fab fa-node text-xl text-green-400"></i>
+          </div>
+          <button onclick="openCertModal('https://media.licdn.com/dms/image/v2/D4D2DAQHiK83utcEOew/profile-treasury-document-cover-images_800/B4DZ5u8XYlH4A8-/0/1779977780418?e=1781020800&v=beta&t=cM8w1VKii4Bhcf0iteqr-MTT2X7pFQWQ1SLaxnomfMI', 'Node.js')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">Node.js Core Training</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Infosys tracking asynchronous process cycles, event loops, file stream integrations, and backend module development structures.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fab fa-node-js text-green-400 icon-tooltip" data-title="NodeJS Core"></i>
+        </div>
+      </div>
+
+      <!-- Cert 25 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-slate-500/10 rounded-full blur-2xl group-hover:bg-slate-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-slate-500/10 flex items-center justify-center border border-slate-500/20">
+            <i class="fas fa-server text-xl text-slate-400"></i>
+          </div>
+          <button onclick="openCertModal('https://media.licdn.com/dms/image/v2/D4D2DAQHJXMdUZjRoBQ/profile-treasury-document-cover-images_480/B4DZ5u7gHpGYA0-/0/1779977553977?e=1781020800&v=beta&t=IplrWtJYYnUhoe4tWnUd0YnW39Ryrs_emOKfvWJwHyA', 'ExpressJS Essential Training')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-slate-300 transition-colors">ExpressJS Essential Training</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Infosys program focused on custom server-side middleware design architectures, parsing requests, and setting up error handling flows inside web projects.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fas fa-bolt text-yellow-400 icon-tooltip" data-title="ExpressJS"></i>
+        </div>
+      </div>
+
+      <!-- Cert 13 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-green-500/10 rounded-full blur-2xl group-hover:bg-green-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center border border-green-500/20">
+            <i class="fab fa-android text-xl text-green-400"></i>
+          </div>
+          <button onclick="openCertModal('https://d9jmtjs5r4cgq.cloudfront.net/ComplementaryCourseCertificate/3747215/original/Lakhadiya_Hemang_Sureshbhai20231129-73-7vexou.jpg', 'Android Application Development')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">Android App Development</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Great Learning program covering native UI designs, activity flow tracking states, internal intents, and managing localized operational storage spaces inside mobile builds.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fab fa-android text-green-400 icon-tooltip" data-title="Android Mobile SDK"></i>
+          <i class="fab fa-java text-orange-400 icon-tooltip" data-title="Java Core"></i>
+        </div>
+      </div>
+
+      <!-- Cert 20 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl group-hover:bg-orange-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center border border-orange-500/20">
+            <i class="fas fa-compass text-xl text-orange-400"></i>
+          </div>
+          <button onclick="openCertModal('https://media.licdn.com/dms/image/v2/D4D2DAQGOdTtXL1vPVA/profile-treasury-document-cover-images_800/B4DZ5u5p.qJQBA-/0/1779977070176?e=1781020800&v=beta&t=ihrgILNaHHBZNUskGBR-UaPGHK8fUb0hL4xYy40g8d0', 'Complete Front End Development Journey')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">Complete Front End Journey</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Infosys curriculum addressing structural semantic UI components, responsive layout alignments, DOM scripting operations, and interface architectures.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fab fa-html5 text-orange-500 icon-tooltip" data-title="HTML5 Core"></i>
+          <i class="fab fa-css3-alt text-blue-400 icon-tooltip" data-title="CSS3 Styling"></i>
+        </div>
+      </div>
+
+      <!-- Cert 22 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-yellow-500/10 rounded-full blur-2xl group-hover:bg-yellow-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-yellow-500/10 flex items-center justify-center border border-yellow-500/20">
+            <i class="fas fa-code-branch text-xl text-yellow-400"></i>
+          </div>
+          <button onclick="openCertModal('https://media.licdn.com/dms/image/v2/D4D2DAQEdSbwKpf8CJw/profile-treasury-document-cover-images_480/B4DZ5u6VAiHgA4-/0/1779977246259?e=1781020800&v=beta&t=JbfJBTWp8-oQ4WMWE5eLpCTB4zC0YDr6jjLJTLj1_y8', 'Frontend web developer Modern HTML CSS JavaScript')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">Modern Frontend Web Developer</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Infosys certification focusing heavily on ES6+ features, advanced CSS Flexbox/Grid systems, and writing asynchronous client-side API script operations.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fab fa-js text-yellow-400 icon-tooltip" data-title="JavaScript ES6"></i>
+          <i class="fas fa-laptop-code text-cyan-400 icon-tooltip" data-title="Modern Web UI"></i>
+        </div>
+      </div>
+
+      <!-- Cert 19 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl group-hover:bg-amber-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-amber-500/10 flex items-center justify-center border border-amber-500/20">
+            <i class="fas fa-vial text-xl text-amber-400"></i>
+          </div>
+          <button onclick="openCertModal('https://d9jmtjs5r4cgq.cloudfront.net/ComplementaryCourseCertificate/4754984/original/Lakhadiya_Hemang_Sureshbhai20240530-72-1cv1um2.jpg', 'Introduction to API Testing')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors">Introduction to API Testing</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Great Learning path introducing endpoint request testing operations, asserting payload responses, tracking status configurations, and backend interface validation.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fas fa-plug text-amber-400 icon-tooltip" data-title="Endpoint Testing"></i>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ================= CATEGORY 2: LANGUAGES, DATA & AI ================= -->
+    <div class="flex items-center gap-4 mb-12" data-aos="fade-up">
+      <div class="h-px bg-gradient-to-r from-transparent to-slate-700 flex-1"></div>
+      <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+        <i class="fas fa-database text-cyan-400"></i> Programming Languages, DSA & Databases
+      </h2>
+      <div class="h-px bg-gradient-to-l from-transparent to-slate-700 flex-1"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+      <!-- Cert 18 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20">
+            <i class="fas fa-sitemap text-xl text-cyan-400"></i>
+          </div>
+          <button onclick="openCertModal('https://d9jmtjs5r4cgq.cloudfront.net/ComplementaryCourseCertificate/4754826/original/Lakhadiya_Hemang_Sureshbhai20240530-72-tougjw.jpg', 'Data Structure & Algorithms in Java')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">DSA in Java</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Great Learning framework certificate analyzing algorithm complexities, arrays, linked lists, stacks, sorting operations, and computational runtime safety logic.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fab fa-java text-orange-400 icon-tooltip" data-title="Java Algorithmic Logic"></i>
+          <i class="fas fa-code text-cyan-400 icon-tooltip" data-title="Algorithms"></i>
+        </div>
+      </div>
+
+      <!-- Cert 29 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20">
+            <i class="fas fa-leaf text-xl text-emerald-400"></i>
+          </div>
+          <button onclick="openCertModal('https://media.licdn.com/dms/image/v2/D4D2DAQF0m35YSJi2Uw/profile-treasury-document-cover-images_480/B4DZ5u8rjeGYA0-/0/1779977862461?e=1781020800&v=beta&t=NSO65jCU6FLNxfdwEM5gOMrnGwNrJhUllJn3tw9Aq6k', 'The Complete Developers Guide to MongoDB')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">The Complete Guide to MongoDB</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Udemy production-grade guide covering complex query pipelines, indexing strategies, embedding architectures, and optimization patterns for document stores.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fas fa-database text-emerald-400 icon-tooltip" data-title="NoSQL Architecture"></i>
+        </div>
+      </div>
+
+      <!-- Cert 24 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center border border-purple-500/20">
+            <i class="fas fa-wand-magic-sparkles text-xl text-purple-400"></i>
+          </div>
+          <button onclick="openCertModal('https://media.licdn.com/dms/image/v2/D4D2DAQHOfqlwcIJFDA/profile-treasury-document-cover-images_800/B4DZ5u7NJoJcBA-/0/1779977475722?e=1781020800&v=beta&t=tFBIxSyd1_w0gNJBYLCHOwK1wupZsHCOhFTpH_qgHxE', 'Prompt Engineering for Data Analysis Python, Pandas, ChatGPT')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">Prompt Engineering for Data Analysis</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Udemy specialization binding python analytics matrix arrays (Pandas) with ChatGPT optimization prompts to parse, clean, and map corporate data trends.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fab fa-python text-yellow-400 icon-tooltip" data-title="Python Data"></i>
+          <i class="fas fa-brain text-pink-400 icon-tooltip" data-title="Generative AI"></i>
+        </div>
+      </div>
+
+      <!-- Cert 16 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-yellow-500/10 rounded-full blur-2xl group-hover:bg-yellow-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-yellow-500/10 flex items-center justify-center border border-yellow-500/20">
+            <i class="fab fa-python text-xl text-yellow-400"></i>
+          </div>
+          <button onclick="openCertModal('https://dtmvamahs40ux.cloudfront.net/ComplementaryCourseCertificate/4044279/original/Lakhadiya_Hemang_Sureshbhai20240124-73-pwdd9p.jpg', 'Python for Data Science')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">Python for Data Science</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Great Learning pathway validating systematic arrays manipulation, statistical plotting configurations, and baseline analytics parsing models inside NumPy and Pandas environments.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fab fa-python text-yellow-400 icon-tooltip" data-title="Python Core"></i>
+          <i class="fas fa-chart-pie text-pink-400 icon-tooltip" data-title="Data Visualizations"></i>
+        </div>
+      </div>
+
+      <!-- Cert 31 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-emerald-600/10 rounded-full blur-2xl group-hover:bg-emerald-600/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-emerald-600/10 flex items-center justify-center border border-emerald-600/20">
+            <i class="fas fa-terminal text-xl text-emerald-400"></i>
+          </div>
+          <button onclick="openCertModal('https://media.licdn.com/dms/image/v2/D4D2DAQHkCxqh1K3fPQ/profile-treasury-document-images_1280/B4DZ5u9RGUKEAg-/1/1779978016951?e=1781136000&v=beta&t=VHnk8vWDQLhjt3mbF64mkhSjxL__82sozvNsXXGBRIo', 'Python Essentials')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">Python Essentials</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Cisco Networking Academy programmatic logic tracking operational loop layouts, structural data collections, custom parameter functions, and script execution tracking setups.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fab fa-python text-yellow-400 icon-tooltip" data-title="Python Fundamentals"></i>
+        </div>
+      </div>
+
+      <!-- Cert 14 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl group-hover:bg-orange-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center border border-orange-500/20">
+            <i class="fab fa-java text-xl text-orange-400"></i>
+          </div>
+          <button onclick="openCertModal('https://d9jmtjs5r4cgq.cloudfront.net/ComplementaryCourseCertificate/3747581/original/Lakhadiya_Hemang_Sureshbhai20231129-73-10zezi0.jpg', 'OOPs in JAVA')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">OOPs in JAVA</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Great Learning architectural program validating core inheritance rules, interface abstractions, clean polymorphism execution setups, and encapsulation safety.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fab fa-java text-orange-400 icon-tooltip" data-title="Java Core"></i>
+          <i class="fas fa-cubes text-blue-400 icon-tooltip" data-title="Object Oriented Architecture"></i>
+        </div>
+      </div>
+
+      <!-- Cert 15 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center border border-blue-500/20">
+            <i class="fas fa-database text-xl text-blue-400"></i>
+          </div>
+          <button onclick="openCertModal('https://d9jmtjs5r4cgq.cloudfront.net/ComplementaryCourseCertificate/3748590/original/Lakhadiya_Hemang_Sureshbhai20231129-72-1ui4xvv.jpg', 'SQL')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">SQL Query Mastery</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Great Learning tracking relational data structures, writing nested subqueries, execution of relational join mechanisms, and grouping aggregates.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fas fa-database text-blue-400 icon-tooltip" data-title="Relational Data"></i>
+        </div>
+      </div>
+
+      <!-- Cert 21 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center border border-blue-500/20">
+            <i class="fas fa-diagram-project text-xl text-blue-400"></i>
+          </div>
+          <button onclick="openCertModal('https://media.licdn.com/dms/image/v2/D4D2DAQHvg37TzKPlgg/profile-treasury-document-cover-images_1280/B4DZ5u6C8oJcBA-/0/1779977172603?e=1781020800&v=beta&t=io0nE1p5zHzRFTNrTc5U5btW0n8XScfnR9T6SnTyZRc', 'Database Design')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">Database Design</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Infosys certification assessing entity relationship architectures, primary/foreign structural references mapping layouts, and data index schema builds.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fas fa-database text-blue-400 icon-tooltip" data-title="Database Architecture"></i>
+        </div>
+      </div>
+
+      <!-- Cert 23 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center border border-blue-500/20">
+            <i class="fas fa-table text-xl text-blue-400"></i>
+          </div>
+          <button onclick="openCertModal('https://media.licdn.com/dms/image/v2/D4D2DAQGaTCEKfegpLQ/profile-treasury-document-cover-images_480/B4DZ5u6nZFKAA4-/0/1779977321536?e=1781020800&v=beta&t=i4KrFJe-SHleaW_2E39iT6LccXcVSnHS4CbKVebeQ28', 'Normalization Concepts')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">Normalization Concepts</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Infosys framework covering structural data refinement rules spanning 1NF, 2NF, 3NF, and BCNF properties to eliminate database anomalies.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fas fa-table text-blue-400 icon-tooltip" data-title="Relational Normalization"></i>
+        </div>
+      </div>
+
+      <!-- Cert 1 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-slate-500/10 rounded-full blur-2xl group-hover:bg-slate-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-slate-500/10 flex items-center justify-center border border-slate-500/20">
+            <i class="fas fa-terminal text-xl text-slate-400"></i>
+          </div>
+          <button onclick="openCertModal('https://d9jmtjs5r4cgq.cloudfront.net/ComplementaryCourseCertificate/1428033/original/Lakhadiya_Hemang_sureshbhai20220805-11282-18ype4.jpg', 'Programming in C')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-slate-400 transition-colors">Programming in C</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Great Learning verification of low-level programmatic building block tracks, functional compilation pipelines, pointers, and manual memory workflows.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fas fa-code text-slate-400 icon-tooltip" data-title="Low-Level Logic"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= CATEGORY 3: CLOUD & NETWORKING ================= -->
+    <div class="flex items-center gap-4 mb-12" data-aos="fade-up">
+      <div class="h-px bg-gradient-to-r from-transparent to-slate-700 flex-1"></div>
+      <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+        <i class="fas fa-cloud text-sky-400"></i> Cloud, Infrastructure & Networking
+      </h2>
+      <div class="h-px bg-gradient-to-l from-transparent to-slate-700 flex-1"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+      <!-- Cert 5 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center border border-blue-500/20">
+            <i class="fab fa-google text-xl text-blue-400"></i>
+          </div>
+          <button onclick="openCertModal('https://cdn.qwiklabs.com/yM6GdQHQRb2U5W%2Bs1kXP%2BArp7Gk5uWKWf7qscY5Ip8I%3D', 'Google Cloud Computing Foundations: Cloud Computing Fundamentals')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-expand-invert fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">Cloud Computing Fundamentals</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Google Cloud Computing Foundations series validating standard understanding of cloud architecture paradigm and infrastructure ecosystems.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fab fa-google text-blue-400 icon-tooltip" data-title="Google"></i>
+          <i class="fas fa-cloud text-sky-400 icon-tooltip" data-title="GCP Core"></i>
+        </div>
+      </div>
+
+      <!-- Cert 6 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center border border-blue-500/20">
+            <i class="fab fa-google text-xl text-blue-400"></i>
+          </div>
+          <button onclick="openCertModal('https://cdn.qwiklabs.com/nxkFOa%2BQcw0G4Dq2Er4xVTQOD5Dd7g%2FDF9aAfho3ga0%3D', 'Google Cloud Computing Foundations: Infrastructure in Google Cloud')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">Infrastructure in Google Cloud</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">In-depth specialized baseline validation covering IAM configurations, Compute Engines, and virtual network deployments within GCP environments.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fab fa-google text-blue-400 icon-tooltip" data-title="Google"></i>
+          <i class="fas fa-server text-indigo-400 icon-tooltip" data-title="Infrastructure"></i>
+        </div>
+      </div>
+
+      <!-- Cert 7 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center border border-blue-500/20">
+            <i class="fab fa-google text-xl text-blue-400"></i>
+          </div>
+          <button onclick="openCertModal('https://cdn.qwiklabs.com/TmFGZdGKs%2BJyORHE9RFtov%2BI2I8R%2Bk8QYHBLtoT2ecM%3D', 'Google Cloud Computing Foundations: Networking')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">Networking in Google Cloud</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Covers foundational setup rules for VPCs, structural subnets, firewall properties, load balancers, and external routing gateways.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fab fa-google text-blue-400 icon-tooltip" data-title="Google"></i>
+          <i class="fas fa-network-wired text-cyan-400 icon-tooltip" data-title="Networking"></i>
+        </div>
+      </div>
+
+      <!-- Cert 8 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center border border-blue-500/20">
+            <i class="fab fa-google text-xl text-blue-400"></i>
+          </div>
+          <button onclick="openCertModal('https://cdn.qwiklabs.com/9Bvid9kadoH3pv%2BlPRdUiVyAELuEZPVpDBjN5v9rsY0%3D', 'Google Cloud Computing Foundations: Data, ML, and AI in Google Cloud')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">Data, ML, and AI in GCP</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Overview of cloud analytics pipelines, BigQuery integrations, and baseline implementations of machine learning models within Google Cloud.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fab fa-google text-blue-400 icon-tooltip" data-title="Google"></i>
+          <i class="fas fa-brain text-pink-400 icon-tooltip" data-title="AI & ML"></i>
+        </div>
+      </div>
+
+      <!-- Cert 9 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20">
+            <i class="fas fa-cubes text-xl text-cyan-400"></i>
+          </div>
+          <button onclick="openCertModal('https://cdn.qwiklabs.com/AWXga43fWcp%2Fm7S9tR0IYI4AiOgvMtvsFm56u7knzww%3D', 'Create and Manage Cloud Resources')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">Create & Manage Cloud Resources</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Google Cloud Skill Badge validating real execution speed inside terminal lines shell layouts, managing active engines, and deploying Kubernetes clusters.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fab fa-google text-blue-400 icon-tooltip" data-title="Google Cloud Skill Badge"></i>
+          <i class="fas fa-terminal text-slate-400 icon-tooltip" data-title="CLI Execution"></i>
+        </div>
+      </div>
+
+      <!-- Cert 10 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20">
+            <i class="fas fa-tools text-xl text-cyan-400"></i>
+          </div>
+          <button onclick="openCertModal('https://cdn.qwiklabs.com/cfor4RrFeZVD65Yz1R4o2hFlOivAjJ6TMVWX3HOqKRc%3D', 'Perform Foundational Infrastructure Tasks in Google Cloud')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">Foundational Infrastructure Tasks</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Google Cloud Skill Badge tracking accurate configuration setups for Cloud Storage, Pub/Sub events, and stack driver tracking metrics.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fab fa-google text-blue-400 icon-tooltip" data-title="Google Cloud Skill Badge"></i>
+          <i class="fas fa-sliders text-purple-400 icon-tooltip" data-title="Configuration Management"></i>
+        </div>
+      </div>
+
+      <!-- Cert 11 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20">
+            <i class="fas fa-shield-halved text-xl text-cyan-400"></i>
+          </div>
+          <button onclick="openCertModal('https://cdn.qwiklabs.com/r3%2FtZVcjZPqPBTyzDguDB8wOXzBiNEIh4G7ZpbMozaY%3D', 'Build and Secure Networks in Google Cloud')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">Build & Secure Networks in GCP</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Google Cloud Skill Badge for network security controls, managing safe bastion hosts, IAM configurations, and structural perimeter firewall defenses.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fab fa-google text-blue-400 icon-tooltip" data-title="Google Cloud Skill Badge"></i>
+          <i class="fas fa-user-shield text-emerald-400 icon-tooltip" data-title="Network Security"></i>
+        </div>
+      </div>
+
+      <!-- Cert 12 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20">
+            <i class="fas fa-chart-line text-xl text-cyan-400"></i>
+          </div>
+          <button onclick="openCertModal('https://cdn.qwiklabs.com/Z9RnG0DZDYJa%2BuUUC4NNASbN%2F8q4Ay6Bi4AUpLARkJM%3D', 'Perform Foundational Data, ML, and AI Tasks in Google Cloud')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">Foundational Data & AI Tasks</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Google Cloud Skill Badge validating real capabilities using Cloud SQL pipelines, Dataproc workflows, and invoking AI APIs inside cloud structures.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fab fa-google text-blue-400 icon-tooltip" data-title="Google Cloud Skill Badge"></i>
+          <i class="fas fa-database text-teal-400 icon-tooltip" data-title="Cloud Databases"></i>
+        </div>
+      </div>
+
+      <!-- Cert 26 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-blue-600/10 rounded-full blur-2xl group-hover:bg-blue-600/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-blue-600/10 flex items-center justify-center border border-blue-600/20">
+            <i class="fas fa-network-wired text-xl text-blue-400"></i>
+          </div>
+          <button onclick="openCertModal('https://media.licdn.com/dms/image/v2/D4D2DAQEl0dLVyQhYoQ/profile-treasury-document-images_1280/B4DZ5u7tCYGYAg-/1/1779977606843?e=1781136000&v=beta&t=whA2UMwDC9B_t3xYkQlswgS1BT7o7axFjCClM4HLLeA', 'General Networking - Networking and Security Course')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">General Networking & Security</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Infosys Springboard path detailing network standard layer patterns, routing policies, network perimeter designs, and classic cybersecurity rules.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fas fa-building text-blue-500 icon-tooltip" data-title="Infosys Springboard"></i>
+          <i class="fas fa-lock text-red-400 icon-tooltip" data-title="Infrastructure Security"></i>
+        </div>
+      </div>
+
+      <!-- Cert 27 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20">
+            <i class="fas fa-ethernet text-xl text-emerald-400"></i>
+          </div>
+          <button onclick="openCertModal('https://media.licdn.com/dms/image/v2/D4D2DAQFnA-5EUtUOAA/profile-treasury-document-images_1280/B4DZ5u8DtfJcAg-/1/1779977699761?e=1781136000&v=beta&t=mydT4qxds6DSKBPDdOtuKAWQQJbpJnhb8rBoZH6i_bM', 'Networking Essentials')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">Networking Essentials</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Cisco Networking Academy certification verifying solid mastery over subnet architectural distributions, IP configurations, switches, and core data routing devices.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fas fa-network-wired text-emerald-400 icon-tooltip" data-title="Cisco Networking Academy"></i>
+          <i class="fas fa-route text-sky-400 icon-tooltip" data-title="Subnetting & Routing"></i>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ================= CATEGORY 4: PROFESSIONAL & CREATIVE ================= -->
+    <div class="flex items-center gap-4 mb-12" data-aos="fade-up">
+      <div class="h-px bg-gradient-to-r from-transparent to-slate-700 flex-1"></div>
+      <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+        <i class="fas fa-user-tie text-emerald-400"></i> Professional Skills & Creative Design
+      </h2>
+      <div class="h-px bg-gradient-to-l from-transparent to-slate-700 flex-1"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Cert 2 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-pink-500/10 rounded-full blur-2xl group-hover:bg-pink-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-pink-500/10 flex items-center justify-center border border-pink-500/20">
+            <i class="fas fa-palette text-xl text-pink-400"></i>
+          </div>
+          <button onclick="openCertModal('https://d9jmtjs5r4cgq.cloudfront.net/ComplementaryCourseCertificate/1571347/original/Lakhadiya_Hemang_sureshbhai20220907-27368-1z0ckzx.jpg', 'Graphic Design with Photoshop')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-pink-400 transition-colors">Graphic Design with Photoshop</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Great Learning studio track certifying layer architecture adjustments, compositing design paths, color systems, and assets creation workflows.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fas fa-image text-pink-400 icon-tooltip" data-title="Photoshop UI Design"></i>
+        </div>
+      </div>
+
+      <!-- Cert 3 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center border border-blue-500/20">
+            <i class="fas fa-briefcase text-xl text-blue-400"></i>
+          </div>
+          <button onclick="openCertModal('https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~U4QJVNFRY8W8/CERTIFICATE_LANDING_PAGE~U4QJVNFRY8W8.jpeg', 'Preparation For Job Interviews')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">Preparation For Job Interviews</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Coursera placement track mapping structural behavioral logic, engineering project walkthrough layouts, and communication strategy patterns.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fas fa-handshake text-blue-400 icon-tooltip" data-title="Professional Communication"></i>
+        </div>
+      </div>
+
+      <!-- Cert 4 -->
+      <div class="glass-card p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+        <div class="absolute -right-12 -top-12 w-32 h-32 bg-slate-500/10 rounded-full blur-2xl group-hover:bg-slate-500/20 transition-all duration-500"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-12 h-12 rounded-lg bg-slate-500/10 flex items-center justify-center border border-slate-500/20">
+            <i class="fas fa-keyboard text-xl text-slate-400"></i>
+          </div>
+          <button onclick="openCertModal('https://media.licdn.com/dms/image/v2/D4D2DAQGPCg6EiQovVg/profile-treasury-image-shrink_1280_1280/B4DZ6JCnPhIAAY-/0/1780415624439?e=1781020800&v=beta&t=CBl-yW2y4FapG3oCeudOMtwvZDFQLLLKQStRHfy6f8g', 'Typing certificate Ratatype')" class="text-slate-500 hover:text-white transition transform hover:scale-110"><i class="fas fa-eye"></i></button>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-slate-400 transition-colors">Ratatype Typing Certificate</h3>
+        <p class="text-sm text-slate-400 mb-6 flex-1 leading-relaxed text-justify">Verified test tracking word-per-minute execution velocity and keystroke accuracy metrics, critical for terminal productivity stability.</p>
+        <div class="flex items-center gap-5 mt-auto border-t border-white/5 pt-5 text-2xl">
+          <i class="fas fa-bolt text-yellow-400 icon-tooltip" data-title="High-Speed Execution"></i>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= MODERN INTERACTIVE MODAL OVERLAY ================= -->
+<div id="cert-modal" class="hidden fixed inset-0 z-[100] w-full h-full bg-slate-950/80 backdrop-blur-md items-center justify-center p-4 transition-all duration-300">
+  <div class="relative max-w-4xl w-full bg-slate-900/90 border border-white/10 rounded-2xl overflow-hidden shadow-2xl p-4 md:p-6" data-aos="zoom-in" data-aos-duration="200">
+    <!-- Modal Control Elements -->
+    <div class="flex justify-between items-center mb-4 border-b border-white/5 pb-3">
+      <h4 id="modal-title" class="text-md md:text-lg font-bold text-white tracking-wide truncate max-w-[85%]">Certificate Preview</h4>
+      <button onclick="closeCertModal()" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-red-500/20 hover:text-red-400 text-slate-400 flex items-center justify-center transition border border-white/5">
+        <i class="fas fa-times text-lg"></i>
+      </button>
+    </div>
+    <!-- Interactive View Canvas -->
+    <div class="w-full flex items-center justify-center bg-black/40 rounded-xl overflow-hidden p-2 max-h-[70vh]">
+      <img id="modal-img" src="" alt="Certificate Image Preview" class="max-w-full max-h-[65vh] object-contain rounded-lg shadow-md transition-transform duration-300 hover:scale-105 cursor-zoom-in" />
+    </div>
+  </div>
+</div>
+
+
+
 <footer class="py-12 border-t border-white/5 bg-[#070b13] relative overflow-hidden">
   <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -618,6 +1211,45 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
+  
+  function openCertModal(imageSrc, certificateTitle) {
+    const modalCanvas = document.getElementById('cert-modal');
+    const modalImageElement = document.getElementById('modal-img');
+    const modalTitleElement = document.getElementById('modal-title');
+    
+    // Inject Target Details
+    modalImageElement.src = imageSrc;
+    modalTitleElement.innerText = certificateTitle;
+    
+    // Smooth Render Triggers
+    modalCanvas.classList.remove('hidden');
+    modalCanvas.classList.add('flex');
+    document.body.style.overflow = 'hidden'; // Lock scrolling underneath
+  }
+
+  function closeCertModal() {
+    const modalCanvas = document.getElementById('cert-modal');
+    
+    // Teardown View States
+    modalCanvas.classList.add('hidden');
+    modalCanvas.classList.remove('flex');
+    document.body.style.overflow = 'auto'; // Re-enable background scrolling
+  }
+
+  // Handle Close Event via Escape Key
+  document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+      closeCertModal();
+    }
+  });
+
+  // Handle Close Event via clicking Background Overlay Area
+  document.getElementById('cert-modal').addEventListener('click', function(event) {
+    if (event.target === this) {
+      closeCertModal();
+    }
+  });
+
   // 1. Initialize Animate On Scroll (AOS)
   AOS.init({
     once: true, // Whether animation should happen only once while scrolling down
