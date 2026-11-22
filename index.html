@@ -186,38 +186,221 @@
         hyphens: auto;
       }
     }
+
+    /* Growth Loader Smooth Dismissal & Step Transitions */
+    #app-loader.opacity-0 {
+      opacity: 0 !important;
+      pointer-events: none !important;
+      visibility: hidden !important;
+      transform: translateY(-8px) scale(0.985);
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .growth-step {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    /* Safe CSS fallback: auto-hide after 5.8s if JavaScript ever hangs */
+    @keyframes loader-safety-timeout {
+      0%, 92% { opacity: 1; }
+      100% { opacity: 0; pointer-events: none; visibility: hidden; }
+    }
+    #app-loader {
+      animation: loader-safety-timeout 5.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
 </style>
 </head>
 
 <body class="bg-white text-slate-900 font-sans antialiased overflow-x-hidden selection:bg-blue-100 selection:text-blue-900">
 
-  <!-- ================= INITIAL LOADING SCREEN ================= -->
-  <div id="app-loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-all duration-700 ease-out">
-    <div class="flex flex-col items-center text-center px-6">
+  <!-- ================= CREATIVE DEVELOPER INITIAL LOADING SCREEN (GROWTH & ARCHITECTURE) ================= -->
+  <div id="app-loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center p-3 sm:p-6 select-none overflow-y-auto">
+    <!-- Ambient dot background & radiant atmospheric glowing orbs -->
+    <div class="absolute inset-0 bg-dot-pattern opacity-60 pointer-events-none"></div>
+    <div class="absolute top-1/4 left-1/4 w-80 h-80 bg-blue-100/50 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-100/50 rounded-full blur-3xl pointer-events-none animate-pulse" style="animation-delay: 1.2s;"></div>
+
+    <!-- Direct Skip Button -->
+    <button id="loader-skip-btn" onclick="dismissLoader()" class="absolute top-3 right-3 sm:top-6 sm:right-6 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-100/90 hover:bg-slate-200 text-slate-600 hover:text-slate-900 text-xs font-semibold tracking-wide border border-slate-200/90 transition-all duration-200 z-20 shadow-xs cursor-pointer group">
+      <span>Skip Intro</span>
+      <i class="fa-solid fa-arrow-right text-[10px] transform group-hover:translate-x-0.5 transition-transform"></i>
+    </button>
+
+    <!-- Main Interactive Card -->
+    <div class="relative z-10 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-3xl p-5 sm:p-7 max-w-xl w-full shadow-[0_20px_50px_rgba(15,23,42,0.08)] flex flex-col items-center text-center my-auto">
       
-      <!-- HL Monogram Logo with Pulse Ring -->
-      <div class="relative mb-6">
-        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white font-extrabold flex items-center justify-center text-2xl tracking-widest shadow-float transform transition-transform duration-500 scale-100">
-          HL
+      <!-- Top Monogram & Identity Header -->
+      <div class="flex items-center gap-3.5 mb-3.5 text-left w-full justify-start">
+        <div class="relative shrink-0">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-blue-600 via-indigo-600 to-blue-700 text-white font-extrabold flex items-center justify-center text-lg sm:text-xl tracking-widest shadow-md">
+            HL
+          </div>
+          <div class="absolute -inset-1 rounded-2xl border-2 border-blue-400/40 animate-ping pointer-events-none"></div>
+          <div class="absolute -inset-2 rounded-2xl border border-indigo-400/30 animate-pulse pointer-events-none"></div>
         </div>
-        <div class="absolute -inset-1 rounded-2xl border-2 border-blue-400/40 animate-ping pointer-events-none"></div>
+
+        <div class="flex flex-col min-w-0">
+          <div class="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-blue-600">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Developer Journey &bull; Initializing System</span>
+          </div>
+          <h1 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight leading-tight truncate">
+            Hemang Lakhadiya
+          </h1>
+          <p class="text-xs font-semibold text-slate-600 truncate">
+            Full Stack Developer &amp; Mobile Architect
+          </p>
+        </div>
       </div>
 
-      <!-- Identity Text -->
-      <h1 class="text-xl font-extrabold text-slate-900 tracking-tight mb-1">
-        Hemang<span class="text-blue-600">.dev</span>
-      </h1>
-      <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-6">
-        Building Digital Experiences Through Code
-      </p>
+      <!-- Growth Milestones Pipeline (All 5 Career & Engineering Milestones!) -->
+      <div class="w-full bg-slate-50/90 rounded-2xl border border-slate-200/90 p-3 sm:p-3.5 mb-3.5 text-left">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-600 flex items-center gap-1.5">
+            <i class="fa-solid fa-chart-line text-blue-600"></i>
+            Career &amp; Technical Growth Pipeline
+          </span>
+          <span id="growth-stage-pill" class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-700 border border-blue-200">
+            Stage 1 of 5: Academic Genesis
+          </span>
+        </div>
 
-      <!-- Progress Track & Animated Bar -->
-      <div class="w-48 h-1.5 bg-slate-100 rounded-full overflow-hidden border border-slate-200/60 shadow-inner">
-        <div id="loader-bar" class="h-full bg-blue-600 rounded-full transition-all duration-700 ease-out" style="width: 15%;"></div>
+        <!-- 5 Step Growth Nodes -->
+        <div class="space-y-1.5">
+          <!-- Step 1: BCA Foundations -->
+          <div id="growth-step-1" class="growth-step flex items-start gap-2.5 p-2 sm:p-2.5 rounded-xl bg-white border border-blue-300 shadow-xs">
+            <div class="step-icon w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white flex items-center justify-center shrink-0 text-xs font-bold shadow-xs mt-0.5">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center justify-between gap-1">
+                <span class="text-xs font-bold text-slate-900 truncate">BCA @ Atmiya University (2021 – 2024)</span>
+                <span class="step-badge text-[10px] font-bold text-emerald-600 shrink-0 flex items-center gap-1">
+                  <i class="fa-solid fa-circle-check"></i> 9.32 CGPA Distinction
+                </span>
+              </div>
+              <p class="text-[11px] text-slate-500 line-clamp-1 sm:line-clamp-none">Core Java, C++, Data Structures, Relational Schemas &amp; Web Foundations</p>
+            </div>
+          </div>
+
+          <!-- Step 2: Rajeshwar Info Tech -->
+          <div id="growth-step-2" class="growth-step flex items-start gap-2.5 p-2 sm:p-2.5 rounded-xl bg-slate-50 border border-slate-200 opacity-60">
+            <div class="step-icon w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-slate-200 text-slate-600 flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center justify-between gap-1">
+                <span class="text-xs font-bold text-slate-800 truncate">Web Dev Intern @ Rajeshwar Info Tech</span>
+                <span class="step-badge text-[10px] font-bold text-slate-500 shrink-0">
+                  Aug 2023 – Dec 2024
+                </span>
+              </div>
+              <p class="text-[11px] text-slate-500 line-clamp-1 sm:line-clamp-none">Production Websites, Frontend Architecture, WordPress &amp; Client Deployments</p>
+            </div>
+          </div>
+
+          <!-- Step 3: Hackathons & Award Winner -->
+          <div id="growth-step-3" class="growth-step flex items-start gap-2.5 p-2 sm:p-2.5 rounded-xl bg-slate-50 border border-slate-200 opacity-60">
+            <div class="step-icon w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-slate-200 text-slate-600 flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center justify-between gap-1">
+                <span class="text-xs font-bold text-slate-800 truncate">5&times; Hackathons &amp; Team Sprint Leader</span>
+                <span class="step-badge text-[10px] font-bold text-amber-600 shrink-0 flex items-center gap-1">
+                  <i class="fa-solid fa-award"></i> Winner Code Carnival 3.0
+                </span>
+              </div>
+              <p class="text-[11px] text-slate-500 line-clamp-1 sm:line-clamp-none">1st Place Winner, Rapid 24–36h Full Stack Prototyping &amp; Technical Leadership</p>
+            </div>
+          </div>
+
+          <!-- Step 4: MCA @ Marwadi University -->
+          <div id="growth-step-4" class="growth-step flex items-start gap-2.5 p-2 sm:p-2.5 rounded-xl bg-slate-50 border border-slate-200 opacity-60">
+            <div class="step-icon w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-slate-200 text-slate-600 flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">
+              <i class="fa-solid fa-building-columns"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center justify-between gap-1">
+                <span class="text-xs font-bold text-slate-800 truncate">MCA @ Marwadi University (2024 – Present)</span>
+                <span class="step-badge text-[10px] font-bold text-blue-600 shrink-0">
+                  Current CGPA: 8.83
+                </span>
+              </div>
+              <p class="text-[11px] text-slate-500 line-clamp-1 sm:line-clamp-none">Advanced Software Architecture, Cloud Systems &amp; Enterprise Scalability</p>
+            </div>
+          </div>
+
+          <!-- Step 5: Zennaxx Technology Active Intern -->
+          <div id="growth-step-5" class="growth-step flex items-start gap-2.5 p-2 sm:p-2.5 rounded-xl bg-slate-50 border border-slate-200 opacity-60">
+            <div class="step-icon w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-slate-200 text-slate-600 flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center justify-between gap-1">
+                <span class="text-xs font-bold text-slate-800 truncate">App Full Stack Intern @ Zennaxx Technology</span>
+                <span class="step-badge text-[10px] font-bold text-emerald-600 shrink-0 flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Oct 2026 – Present
+                </span>
+              </div>
+              <p class="text-[11px] text-slate-500 line-clamp-1 sm:line-clamp-none">Node.js, Express, REST APIs, Flutter &amp; Scalable Relational / NoSQL Systems</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Status Subtitle -->
-      <span id="loader-status" class="text-[11px] font-mono text-slate-400 mt-3">Initializing portfolio...</span>
+      <!-- Quick Verified Stats Strip -->
+      <div class="grid grid-cols-4 gap-2 w-full mb-3 text-center">
+        <div class="bg-slate-50 border border-slate-200/90 rounded-xl p-1.5 sm:p-2">
+          <div class="text-xs sm:text-sm font-extrabold text-blue-600">14+</div>
+          <div class="text-[9px] sm:text-[10px] font-semibold text-slate-500 uppercase tracking-tight">Projects</div>
+        </div>
+        <div class="bg-slate-50 border border-slate-200/90 rounded-xl p-1.5 sm:p-2">
+          <div class="text-xs sm:text-sm font-extrabold text-indigo-600">5&times;</div>
+          <div class="text-[9px] sm:text-[10px] font-semibold text-slate-500 uppercase tracking-tight">Hackathons</div>
+        </div>
+        <div class="bg-slate-50 border border-slate-200/90 rounded-xl p-1.5 sm:p-2">
+          <div class="text-xs sm:text-sm font-extrabold text-amber-600">1st</div>
+          <div class="text-[9px] sm:text-[10px] font-semibold text-slate-500 uppercase tracking-tight">Award Winner</div>
+        </div>
+        <div class="bg-slate-50 border border-slate-200/90 rounded-xl p-1.5 sm:p-2">
+          <div class="text-xs sm:text-sm font-extrabold text-emerald-600">16</div>
+          <div class="text-[9px] sm:text-[10px] font-semibold text-slate-500 uppercase tracking-tight">Certificates</div>
+        </div>
+      </div>
+
+      <!-- Verified Tech Badges Stream -->
+      <div class="flex flex-wrap items-center justify-center gap-1.5 mb-3 w-full">
+        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 text-[11px] font-semibold text-slate-700">
+          <i class="fa-brands fa-node-js text-emerald-600"></i> Node.js
+        </span>
+        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 text-[11px] font-semibold text-slate-700">
+          <i class="fa-brands fa-react text-sky-500"></i> React
+        </span>
+        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 text-[11px] font-semibold text-slate-700">
+          <i class="fa-brands fa-laravel text-red-500"></i> Laravel
+        </span>
+        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 text-[11px] font-semibold text-slate-700">
+          <i class="fa-solid fa-mobile-screen text-indigo-600"></i> Flutter
+        </span>
+        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 text-[11px] font-semibold text-slate-700">
+          <i class="fa-solid fa-database text-amber-500"></i> MySQL &amp; Mongo
+        </span>
+      </div>
+
+      <!-- Telemetry Progress Bar & Live Stage Messages -->
+      <div class="w-full">
+        <div class="flex items-center justify-between text-xs font-mono text-slate-600 mb-1.5">
+          <span id="loader-status" class="truncate text-left max-w-[260px] sm:max-w-[360px] font-semibold text-slate-700 flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-blue-600 animate-ping shrink-0"></span>
+            <span>Initializing core engineering modules...</span>
+          </span>
+          <span id="loader-percent" class="font-extrabold text-blue-600 tracking-tight text-sm">0%</span>
+        </div>
+        
+        <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden border border-slate-200/90 p-0.5 shadow-inner">
+          <div id="loader-bar" class="h-full bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-500 rounded-full transition-all duration-300 ease-out" style="width: 0%;"></div>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -445,81 +628,127 @@
           <div class="lg:col-span-5 flex justify-center hero-visual">
             <div class="relative w-full max-w-lg">
               
-              <!-- Soft Glow Backdrop -->
-              <div class="absolute -top-4 -right-4 w-64 h-64 bg-blue-100/50 rounded-2xl filter blur-2xl -z-10"></div>
-              <div class="absolute -bottom-4 -left-4 w-64 h-64 bg-slate-100 rounded-2xl filter blur-2xl -z-10"></div>
+              <!-- Soft Radiant Aura Background -->
+              <div class="absolute -top-4 -right-4 w-72 h-72 bg-blue-100/60 rounded-3xl filter blur-2xl -z-10 animate-pulse"></div>
+              <div class="absolute -bottom-4 -left-4 w-72 h-72 bg-indigo-100/50 rounded-3xl filter blur-2xl -z-10" style="animation-delay: 1.5s;"></div>
 
-              <!-- Main IDE / Developer Card -->
+              <!-- Main IDE / Developer Visual Card -->
               <div class="bg-white rounded-2xl border border-slate-200/90 shadow-float overflow-hidden">
                 
-                <!-- macOS Style Header -->
-                <div class="bg-slate-50/90 px-4 py-3 border-b border-slate-200/80 flex items-center justify-between">
+                <!-- macOS Style Interactive Header with View Toggle Tabs -->
+                <div class="bg-slate-50/95 px-4 py-3 border-b border-slate-200/80 flex items-center justify-between">
+                  <!-- macOS Window Controls -->
                   <div class="flex items-center gap-2">
                     <span class="w-3 h-3 rounded-full bg-rose-400 inline-block"></span>
                     <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
                     <span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span>
                   </div>
-                  <div class="text-xs font-mono font-medium text-slate-500 flex items-center gap-1.5">
-                    <i data-lucide="code-2" class="w-3.5 h-3.5 text-blue-600"></i>
-                    <span>hemang-profile.ts</span>
+
+                  <!-- Interactive View Selector Tabs -->
+                  <div class="flex items-center gap-1 bg-slate-200/70 p-1 rounded-lg text-xs font-medium">
+                    <button id="tab-avatar-btn" onclick="toggleHeroView('avatar')" class="px-3 py-1 rounded-md bg-white text-blue-600 font-semibold shadow-xs transition-all duration-200 flex items-center gap-1.5 cursor-pointer">
+                      <i data-lucide="user" class="w-3.5 h-3.5"></i>
+                      <span>Avatar</span>
+                    </button>
+                    <button id="tab-code-btn" onclick="toggleHeroView('code')" class="px-3 py-1 rounded-md text-slate-600 hover:text-slate-900 transition-all duration-200 flex items-center gap-1.5 cursor-pointer">
+                      <i data-lucide="code-2" class="w-3.5 h-3.5"></i>
+                      <span>hemang-profile.ts</span>
+                    </button>
                   </div>
-                  <div class="text-[10px] text-slate-400 font-mono">UTF-8</div>
+
+                  <div class="text-[10px] text-slate-400 font-mono hidden sm:block">v2.5</div>
                 </div>
 
-                <!-- Code Workspace Canvas -->
-                <div class="p-4 sm:p-5 font-mono text-[11px] sm:text-[13px] leading-relaxed text-slate-700 bg-white space-y-1.5 sm:space-y-2 overflow-x-auto">
-                  <p class="text-slate-400 italic">// Developer Identity &amp; System State</p>
-                  <p><span class="text-blue-600 font-semibold">const</span> <span class="text-indigo-600 font-semibold">developer</span> = {</p>
-                  <p class="pl-4"><span class="text-slate-500">name:</span> <span class="text-emerald-600">"Hemang Lakhadiya"</span>,</p>
-                  <p class="pl-4"><span class="text-slate-500">role:</span> <span class="text-emerald-600">"Full Stack &amp; Mobile Architect"</span>,</p>
-                  <p class="pl-4"><span class="text-slate-500">location:</span> <span class="text-emerald-600">"Rajkot, Gujarat, India"</span>,</p>
-                  <p class="pl-4"><span class="text-slate-500">internships:</span> [</p>
-                  <p class="pl-8"><span class="text-emerald-600">"Zennaxx Technology (Oct 2026 – Present)"</span>,</p>
-                  <p class="pl-8"><span class="text-emerald-600">"Rajeshwar Info Tech (Aug 2023 – Dec 2024)"</span></p>
-                  <p class="pl-4">],</p>
-                  <p class="pl-4"><span class="text-slate-500">education:</span> {</p>
-                  <p class="pl-8"><span class="text-slate-500">degree:</span> <span class="text-emerald-600">"MCA @ Marwadi University"</span>,</p>
-                  <p class="pl-8"><span class="text-slate-500">currentCgpa:</span> <span class="text-amber-600 font-semibold">8.83</span>,</p>
-                  <p class="pl-8"><span class="text-slate-500">undergrad:</span> <span class="text-emerald-600">"BCA Final CGPA: 9.32"</span></p>
-                  <p class="pl-4">},</p>
-                  <p class="pl-4"><span class="text-slate-500">hackathons:</span> <span class="text-indigo-600 font-semibold">"5× Competitor &amp; Team Leader"</span>,</p>
-                  <p class="pl-4"><span class="text-slate-500">recentAward:</span> <span class="text-amber-600 font-semibold">"Winner — Code Carnival 3.0"</span>,</p>
-                  <p class="pl-4"><span class="text-slate-500">status:</span> <span class="text-blue-600 font-semibold">"Open for Engineering Opportunities"</span></p>
-                  <p>};</p>
+                <!-- VIEW 1: Authentic Real Developer Workspace Photograph -->
+                <div id="hero-view-avatar" class="relative block">
+                  <div class="relative h-[480px] sm:h-[530px] w-full overflow-hidden bg-slate-900/5 flex items-center justify-center">
+                    <img 
+                      src="./hemang-avatar.jpg" 
+                      alt="Hemang Lakhadiya - Full Stack Developer &amp; Mobile Architect" 
+                      class="w-full h-full object-cover object-[center_30%] transition-transform duration-700 hover:scale-[1.02]"
+                      loading="eager"
+                    />
+                    
+                    <!-- Ambient Soft Inner Shadow at Bottom for Contrast -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none"></div>
+
+                    <!-- Floating Verified Badges on Top Corners -->
+                    <div class="absolute top-3.5 left-3.5 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/95 text-white text-[11px] font-bold shadow-md backdrop-blur-xs">
+                      <i data-lucide="award" class="w-3.5 h-3.5"></i>
+                      <span>Winner &bull; Code Carnival 3.0</span>
+                    </div>
+
+                    <div class="absolute top-3.5 right-3.5 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200 text-slate-700 text-[11px] font-semibold shadow-xs">
+                      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                      <span>Available for Roles</span>
+                    </div>
+
+                    <!-- Clean Translucent Slim Bottom Identity Pill (Leaves hands & keyboard fully visible) -->
+                    <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-xl px-3 py-2 shadow-md flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <div class="w-7 h-7 rounded-lg bg-blue-600 text-white font-extrabold flex items-center justify-center text-xs shadow-xs">
+                          HL
+                        </div>
+                        <div class="min-w-0">
+                          <div class="flex items-center gap-1">
+                            <span class="text-xs font-bold text-slate-900 truncate">Hemang Lakhadiya</span>
+                            <i data-lucide="check-circle" class="w-3 h-3 text-blue-600 fill-blue-50"></i>
+                          </div>
+                          <p class="text-[10px] text-slate-500 font-medium truncate">Full Stack Developer &bull; MCA @ Marwadi</p>
+                        </div>
+                      </div>
+                      <button onclick="toggleHeroView('code')" class="text-[11px] font-mono text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-1 cursor-pointer bg-blue-50 px-2.5 py-1 rounded-md border border-blue-200/70 hover:bg-blue-100 transition-colors shrink-0">
+                        <span>&lt;/&gt; View Code</span>
+                      </button>
+                    </div>
+
+                  </div>
                 </div>
 
-                <!-- Live Metrics Footer Bar -->
-                <div class="bg-slate-50 px-5 py-3.5 border-t border-slate-200/80 flex items-center justify-between text-xs">
-                  <div class="flex items-center gap-2 text-slate-600 font-medium">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    <span>14+ Verified Projects</span>
-                  </div>
-                  <div class="flex items-center gap-3 text-slate-500 font-mono text-[11px]">
-                    <span><i class="fa-solid fa-trophy text-amber-500 mr-1"></i>5x Hackathons</span>
-                    <span><i class="fa-solid fa-award text-blue-600 mr-1"></i>16 Certs</span>
+                <!-- VIEW 2: Interactive TypeScript IDE State View -->
+                <div id="hero-view-code" class="hidden">
+                  <div class="p-5 font-mono text-[11px] sm:text-[13px] leading-relaxed text-slate-700 bg-white space-y-1.5 sm:space-y-2 overflow-x-auto h-[480px] sm:h-[530px]">
+                    <p class="text-slate-400 italic">// Developer Identity &amp; System State</p>
+                    <p><span class="text-blue-600 font-semibold">const</span> <span class="text-indigo-600 font-semibold">developer</span> = {</p>
+                    <p class="pl-4"><span class="text-slate-500">name:</span> <span class="text-emerald-600">"Hemang Lakhadiya"</span>,</p>
+                    <p class="pl-4"><span class="text-slate-500">role:</span> <span class="text-emerald-600">"Full Stack &amp; Mobile Architect"</span>,</p>
+                    <p class="pl-4"><span class="text-slate-500">location:</span> <span class="text-emerald-600">"Rajkot, Gujarat, India"</span>,</p>
+                    <p class="pl-4"><span class="text-slate-500">internships:</span> [</p>
+                    <p class="pl-8"><span class="text-emerald-600">"Zennaxx Technology (Oct 2026 – Present)"</span>,</p>
+                    <p class="pl-8"><span class="text-emerald-600">"Rajeshwar Info Tech (Aug 2023 – Dec 2024)"</span></p>
+                    <p class="pl-4">],</p>
+                    <p class="pl-4"><span class="text-slate-500">education:</span> {</p>
+                    <p class="pl-8"><span class="text-slate-500">degree:</span> <span class="text-emerald-600">"MCA @ Marwadi University"</span>,</p>
+                    <p class="pl-8"><span class="text-slate-500">currentCgpa:</span> <span class="text-amber-600 font-bold">8.83</span>,</p>
+                    <p class="pl-8"><span class="text-slate-500">undergrad:</span> <span class="text-emerald-600">"BCA Final CGPA: 9.32 with Distinction"</span></p>
+                    <p class="pl-4">},</p>
+                    <p class="pl-4"><span class="text-slate-500">hackathons:</span> <span class="text-indigo-600 font-semibold">"5&times; Competitor &amp; Team Leader"</span>,</p>
+                    <p class="pl-4"><span class="text-slate-500">recentAward:</span> <span class="text-amber-600 font-bold">"Winner — Code Carnival 3.0"</span>,</p>
+                    <p class="pl-4"><span class="text-slate-500">status:</span> <span class="text-blue-600 font-semibold">"Open for Engineering Opportunities"</span></p>
+                    <p>};</p>
                   </div>
                 </div>
 
               </div>
 
-              <!-- Floating Micro-Badges with Gentle CSS Float Animations -->
-              <div class="absolute -bottom-4 right-1 sm:-right-4 bg-white border border-slate-200/90 rounded-xl p-2.5 sm:p-3 shadow-card flex items-center gap-2 sm:gap-3 animate-float-gentle z-20">
-                <div class="w-9 h-9 rounded-lg bg-amber-50 border border-amber-200/60 flex items-center justify-center text-amber-600">
-                  <i data-lucide="award" class="w-4 h-4"></i>
+              <!-- Floating Micro-Badges at Bottom (Cleanly Separated, Zero Overlap) -->
+              <div class="absolute -bottom-4 -left-3 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl border border-slate-200/90 shadow-md flex items-center gap-2.5 animate-float-gentle z-10">
+                <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                  <i data-lucide="check-circle" class="w-4 h-4"></i>
                 </div>
                 <div>
-                  <div class="text-[11px] font-semibold text-slate-900 leading-tight">Code Carnival 3.0</div>
-                  <div class="text-[10px] font-medium text-amber-600">1st Place Winner</div>
+                  <div class="text-[11px] font-bold text-slate-800">14+ Verified Projects</div>
+                  <div class="text-[10px] text-slate-500 font-medium">Production &amp; Research Stack</div>
                 </div>
               </div>
 
-              <div class="absolute -top-4 left-1 sm:-left-4 bg-white border border-slate-200/90 rounded-xl p-2.5 sm:p-3 shadow-card flex items-center gap-2 sm:gap-3 animate-float-delayed z-20">
-                <div class="w-9 h-9 rounded-lg bg-blue-50 border border-blue-200/60 flex items-center justify-center text-blue-600">
-                  <i data-lucide="trophy" class="w-4 h-4"></i>
+              <div class="absolute -bottom-4 -right-3 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl border border-slate-200/90 shadow-md flex items-center gap-2.5 animate-float-delayed z-10">
+                <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                  <i data-lucide="code-2" class="w-4 h-4"></i>
                 </div>
                 <div>
-                  <div class="text-[11px] font-semibold text-slate-900 leading-tight">5× Hackathons</div>
-                  <div class="text-[10px] font-semibold text-blue-600">Designated Team Leader</div>
+                  <div class="text-[11px] font-bold text-slate-800">5&times; Hackathons</div>
+                  <div class="text-[10px] text-slate-500 font-medium">Team Leader &amp; Architect</div>
                 </div>
               </div>
 
@@ -2587,82 +2816,205 @@
     // --- 1. Dynamic Year in Footer ---
     document.getElementById("current-year").textContent = new Date().getFullYear();
 
-    // --- 2. Initial Loader Logic (Respects prefers-reduced-motion) ---
-    window.addEventListener("DOMContentLoaded", () => {
+    // --- 2. Creative Growth & Career Milestone Loader (3.8s – 4.2s Experience) ---
+    let loaderDismissed = false;
+
+    function dismissLoader() {
+      if (loaderDismissed) return;
+      loaderDismissed = true;
       const loader = document.getElementById("app-loader");
-      const loaderBar = document.getElementById("loader-bar");
-      const loaderStatus = document.getElementById("loader-status");
-
-      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-      if (prefersReducedMotion) {
-        if (loader) loader.style.display = "none";
+      if (!loader) {
         initGSAPAnimations();
         return;
       }
-
-      setTimeout(() => { if (loaderBar) loaderBar.style.width = "45%"; }, 150);
-      setTimeout(() => { 
-        if (loaderBar) loaderBar.style.width = "85%";
-        if (loaderStatus) loaderStatus.textContent = "Loading experiences & projects...";
-      }, 350);
-      setTimeout(() => { 
-        if (loaderBar) loaderBar.style.width = "100%";
-        if (loaderStatus) loaderStatus.textContent = "Ready!";
-      }, 600);
-
+      loader.classList.add("opacity-0");
       setTimeout(() => {
-        if (loader) {
-          loader.classList.add("opacity-0", "pointer-events-none");
-          setTimeout(() => {
-            loader.style.display = "none";
-            initGSAPAnimations();
-          }, 600);
+        loader.style.display = "none";
+        initGSAPAnimations();
+      }, 600);
+    }
+
+    function runLoaderProgress() {
+      const bar = document.getElementById("loader-bar");
+      const status = document.getElementById("loader-status");
+      const percent = document.getElementById("loader-percent");
+      const stagePill = document.getElementById("growth-stage-pill");
+
+      const growthSteps = [
+        document.getElementById("growth-step-1"),
+        document.getElementById("growth-step-2"),
+        document.getElementById("growth-step-3"),
+        document.getElementById("growth-step-4"),
+        document.getElementById("growth-step-5")
+      ];
+
+      // Check reduced motion preference
+      const isReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (isReduced) {
+        if (bar) bar.style.width = "100%";
+        if (percent) percent.textContent = "100%";
+        setTimeout(dismissLoader, 300);
+        return;
+      }
+
+      // Timeline tuned to ~4.0s so visitor can appreciate every growth stage
+      const timeline = [
+        {
+          pct: 20,
+          stepIndex: 0,
+          stage: "Stage 1 of 5: Academic Genesis",
+          status: "🎓 BCA @ Atmiya University verified (9.32 CGPA Distinction)...",
+          delay: 150
+        },
+        {
+          pct: 40,
+          stepIndex: 1,
+          stage: "Stage 2 of 5: Industry Internship",
+          status: "💼 Rajeshwar Info Tech: 17-month Web Internship (Aug 2023 – Dec 2024)...",
+          delay: 850
+        },
+        {
+          pct: 60,
+          stepIndex: 2,
+          stage: "Stage 3 of 5: Competitive Hackathons",
+          status: "🏆 5× Hackathon Sprints & 1st Place Winner (Code Carnival 3.0)...",
+          delay: 1650
+        },
+        {
+          pct: 80,
+          stepIndex: 3,
+          stage: "Stage 4 of 5: Postgraduate Excellence",
+          status: "🏛️ MCA @ Marwadi University (Current CGPA: 8.83)...",
+          delay: 2450
+        },
+        {
+          pct: 95,
+          stepIndex: 4,
+          stage: "Stage 5 of 5: Enterprise Engineering",
+          status: "⚡ Zennaxx Technology: App Full Stack Intern (Node.js, APIs & Flutter)...",
+          delay: 3250
+        },
+        {
+          pct: 100,
+          stepIndex: 4,
+          stage: "Portfolio Ready",
+          status: "🚀 Verification Complete • Welcome to Hemang Lakhadiya's Portfolio!",
+          delay: 3850
         }
-      }, 850);
+      ];
+
+      timeline.forEach(item => {
+        setTimeout(() => {
+          if (loaderDismissed) return;
+          if (bar) bar.style.width = item.pct + "%";
+          if (percent) percent.textContent = item.pct + "%";
+          if (status) {
+            status.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-blue-600 animate-ping shrink-0"></span><span>${item.status}</span>`;
+          }
+          if (stagePill) stagePill.textContent = item.stage;
+
+          // Highlight corresponding step card
+          growthSteps.forEach((el, idx) => {
+            if (!el) return;
+            if (idx === item.stepIndex) {
+              el.classList.remove("opacity-60", "bg-slate-50", "border-slate-200");
+              el.classList.add("opacity-100", "bg-white", "border-blue-300", "shadow-sm", "scale-[1.01]");
+              const iconBox = el.querySelector(".step-icon");
+              if (iconBox) {
+                iconBox.classList.remove("bg-slate-200", "text-slate-600");
+                iconBox.classList.add("bg-gradient-to-r", "from-blue-600", "to-indigo-600", "text-white", "shadow-xs");
+              }
+            } else if (idx < item.stepIndex) {
+              el.classList.remove("opacity-60", "scale-[1.01]");
+              el.classList.add("opacity-90", "bg-emerald-50/40", "border-emerald-200");
+              const iconBox = el.querySelector(".step-icon");
+              if (iconBox) {
+                iconBox.classList.remove("bg-slate-200", "text-slate-600");
+                iconBox.classList.add("bg-emerald-600", "text-white");
+              }
+            }
+          });
+        }, item.delay);
+      });
+
+      // Auto dismiss smoothly at 4.3 seconds
+      setTimeout(dismissLoader, 4300);
+    }
+
+    // Allow instant dismissal on Escape or Enter
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" || e.key === "Enter") {
+        dismissLoader();
+      }
     });
 
-    // --- 3. GSAP & ScrollTrigger Animations ---
+    // Run on page load
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", runLoaderProgress);
+    } else {
+      runLoaderProgress();
+    }
+
+    // Hard safety timer: guarantees dismissal after 5.5s
+    setTimeout(dismissLoader, 5500);
+
+    // --- 3. Robust Section Visibility & GSAP Animations ---
     function initGSAPAnimations() {
+      // Guarantee all sections are 100% visible immediately (no blank screens)
+      document.querySelectorAll("section, .section-reveal").forEach(sec => {
+        sec.style.opacity = "1";
+        sec.style.visibility = "visible";
+      });
+
       if (typeof gsap === "undefined") return;
 
       if (typeof ScrollTrigger !== "undefined") {
         gsap.registerPlugin(ScrollTrigger);
       }
 
-      // Hero Elements Staggered Entrance
-      gsap.from(".hero-content > *", {
-        opacity: 0,
-        y: 20,
-        duration: 0.7,
-        stagger: 0.08,
-        ease: "power2.out"
-      });
+      // Safe non-destructive entrance
+      gsap.fromTo(".hero-content > *", 
+        { opacity: 0.3, y: 15 },
+        { opacity: 1, y: 0, duration: 0.6, stagger: 0.05, ease: "power2.out" }
+      );
 
-      gsap.from(".hero-visual", {
-        opacity: 0,
-        scale: 0.95,
-        duration: 0.9,
-        delay: 0.2,
-        ease: "power2.out"
-      });
+      gsap.fromTo(".hero-visual",
+        { opacity: 0.3, scale: 0.98 },
+        { opacity: 1, scale: 1, duration: 0.7, ease: "power2.out" }
+      );
+    }
 
-      // Section Entrance Animations with ScrollTrigger
-      if (typeof ScrollTrigger !== "undefined") {
-        gsap.utils.toArray(".section-reveal").forEach(sec => {
-          gsap.from(sec, {
-            scrollTrigger: {
-              trigger: sec,
-              start: "top 85%",
-              toggleActions: "play none none none"
-            },
-            opacity: 0,
-            y: 30,
-            duration: 0.8,
-            ease: "power2.out"
-          });
-        });
+    // Hero Visual Tab Toggle (Avatar vs Code View)
+    function toggleHeroView(view) {
+      const avatarView = document.getElementById("hero-view-avatar");
+      const codeView = document.getElementById("hero-view-code");
+      const avatarBtn = document.getElementById("tab-avatar-btn");
+      const codeBtn = document.getElementById("tab-code-btn");
+
+      if (view === "avatar") {
+        if (avatarView) avatarView.classList.remove("hidden");
+        if (codeView) codeView.classList.add("hidden");
+        if (avatarBtn) {
+          avatarBtn.classList.add("bg-white", "text-blue-600", "font-semibold", "shadow-xs");
+          avatarBtn.classList.remove("text-slate-600");
+        }
+        if (codeBtn) {
+          codeBtn.classList.remove("bg-white", "text-blue-600", "font-semibold", "shadow-xs");
+          codeBtn.classList.add("text-slate-600");
+        }
+      } else {
+        if (avatarView) avatarView.classList.add("hidden");
+        if (codeView) codeView.classList.remove("hidden");
+        if (codeBtn) {
+          codeBtn.classList.add("bg-white", "text-blue-600", "font-semibold", "shadow-xs");
+          codeBtn.classList.remove("text-slate-600");
+        }
+        if (avatarBtn) {
+          avatarBtn.classList.remove("bg-white", "text-blue-600", "font-semibold", "shadow-xs");
+          avatarBtn.classList.add("text-slate-600");
+        }
       }
+      if (window.lucide) lucide.createIcons();
     }
 
     // --- 4. Verified Projects Data Store ---
@@ -2918,7 +3270,11 @@
 
       setTimeout(typeLoop, speed);
     }
-    document.addEventListener("DOMContentLoaded", typeLoop);
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", typeLoop);
+    } else {
+      typeLoop();
+    }
 
     // --- 6. Mobile Navigation Menu Toggle ---
     const mobileToggle = document.getElementById("mobile-toggle");
